@@ -1,0 +1,42 @@
+site_name: Custom Microscope Documentation
+site_description: Living technical documentation for a custom-built microscope.
+site_url: https://sjdevlin.github.io/CustomMicroscopeDocs/
+repo_url: https://github.com/sjdevlin/CustomMicroscopeDocs
+repo_name: sjdevlin/CustomMicroscopeDocs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Data Capture Pack: data-capture-pack.md
+  - Bill of Materials: bom.md
+  - Mechanical Assembly: mechanical-assembly.md
+  - Optics Path: optics-path.md
+  - Electronics & Wiring: electronics-wiring.md
+  - Software & Control: software-control.md
+  - Calibration & Validation: calibration-validation.md
+  - Operating Procedures: operation-sops.md
+  - Troubleshooting: troubleshooting.md
+  - Maintenance & Change Log: maintenance-change-log.md
+  - Safety: safety.md
+  - Contributing: contributing.md
