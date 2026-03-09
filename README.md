@@ -1,6 +1,6 @@
-# CustomMicroscopeDocs
+# TemikaMicroscopeDocs
 
-Documentation site for a custom-built microscope using MkDocs + Material.
+Documentation site for the Temika microscope using MkDocs + Material.
 
 ## What this repo is for
 

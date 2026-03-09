@@ -1,8 +1,8 @@
-# Software & Control
+# Software Control
 
 ## Goal
 
-Define how to launch and operate the microscope control software (`temika`) and how to manage configuration and data safely.
+Define software environment, launch/shutdown control, configuration management, and release controls for the Temika microscope.
 
 ## Primary control application
 
@@ -10,6 +10,8 @@ Define how to launch and operate the microscope control software (`temika`) and 
 - Launch method: command line
 - UI type: X-Windows graphical application
 - Primary users: trained microscope operators
+
+For window-by-window behavior, see [User Interface](user-interface.md).
 
 ## Environment inventory
 
@@ -39,19 +41,6 @@ Define how to launch and operate the microscope control software (`temika`) and 
 4. Close `temika` cleanly from UI (or controlled terminal exit if required).
 5. Power down illumination and hardware using approved order.
 
-## Operator workflow map
-
-Use this as the baseline flow and refine with screenshots.
-
-1. Launch and hardware connect
-2. Home/reference axes
-3. Load or choose imaging profile
-4. Live view and exposure/focus tuning
-5. Define acquisition region/sequence
-6. Start capture
-7. Verify output and metadata
-8. Shutdown and log run summary
-
 ## Configuration management
 
 | Config Item | File/Location | Owner | Change Process |
@@ -61,29 +50,6 @@ Use this as the baseline flow and refine with screenshots.
 | Imaging profiles |  |  | Version profile names and lock defaults |
 | Device addresses/ports |  |  | Confirm against physical wiring labels |
 | UI presets/workspaces |  |  | Export before software updates |
-
-## UI screen catalog (build from screenshots)
-
-Add one row per screenshot you share.
-
-| Screenshot File | Window/Panel Name | Inferred Function | Controls Seen | Open Questions |
-|---|---|---|---|---|
-| `temika-main-window.png` | Main | Top-level control and status |  |  |
-| `temika-live-view.png` | Live View | Camera preview and exposure tuning |  |  |
-| `temika-stage-control.png` | Stage Control | Motion and homing controls |  |  |
-| `temika-acquisition.png` | Acquisition | Sequence setup and capture start |  |  |
-| `temika-settings.png` | Settings | Device and profile configuration |  |  |
-
-## Screenshot capture protocol
-
-When capturing UI images, include:
-
-- Full window, not cropped controls only
-- One screenshot per major panel/dialog
-- A short filename that identifies function
-- A note of what action was performed just before capture
-
-Recommended naming: `YYYY-MM-DD_temika_<panel-name>_<operator>.png`
 
 ## Data handling
 

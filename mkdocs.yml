@@ -1,5 +1,5 @@
-site_name: Custom Microscope Documentation
-site_description: Living technical documentation for a custom-built microscope.
+site_name: Temika Microscope Documentation
+site_description: Living technical documentation for the Temika microscope.
 site_url: https://sjdevlin.github.io/CustomMicroscopeDocs/
 repo_url: https://github.com/sjdevlin/CustomMicroscopeDocs
 repo_name: sjdevlin/CustomMicroscopeDocs
@@ -33,7 +33,8 @@ nav:
   - Mechanical Assembly: mechanical-assembly.md
   - Optics Path: optics-path.md
   - Electronics & Wiring: electronics-wiring.md
-  - Software & Control: software-control.md
+  - User Interface: user-interface.md
+  - Software Control: software-control.md
   - Calibration & Validation: calibration-validation.md
   - Operating Procedures: operation-sops.md
   - Troubleshooting: troubleshooting.md

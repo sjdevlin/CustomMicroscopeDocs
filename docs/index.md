@@ -1,6 +1,6 @@
-# Custom Microscope Documentation
+# Temika Microscope Documentation
 
-This site is the working source of truth for design, operation, and maintenance of the custom-built microscope.
+This site is the working source of truth for design, operation, and maintenance of the Temika microscope.
 
 ## Start here (first hour)
 
