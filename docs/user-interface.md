@@ -63,9 +63,90 @@ Options observed in `Main_Window_View_Menu.png`:
 
 ## Current documentation scope
 
-This introduction captures startup behavior and window navigation.
+This page now includes startup behavior, window navigation, and initial `Microscopeone` controls.
 
-Next section to build: `Microscopeone` window (controls, parameters, and operating sequence).
+## Microscopeone window overview
+
+Open from: `Temika` main window -> `View` -> `Microscopeone`.
+
+Observed window title: `Temika Microscopeone`
+
+This window has four tabs:
+
+1. `Movement`
+2. `Illumination`
+3. `Environment`
+4. `IO`
+
+## Microscopeone -> Movement tab
+
+### Stepper section
+
+The `Stepper` section has four axis rows:
+
+- `X`: stage axis
+- `Y`: stage axis
+- `Z`: focus axis
+- `Condenser`: condenser axis
+
+Each row includes:
+
+- Arrow buttons for axis movement
+- A speed slider (default shown as `5`, range `1-9`)
+- Numeric position display
+- `Reset` control for position zeroing
+- `Enable` checkbox for axis control
+
+At slider value `5`, observed speed scales differ by axis:
+
+| Axis | Speed at Slider 5 |
+|---|---|
+| X/Y | 100 um/s |
+| Z (focus) | 5 um/s |
+| Condenser | 500 um/s |
+
+### Referencing and zeroing guidance
+
+- Position readouts can be zeroed at any point.
+- Use a known reference before operation.
+- Recommended practice:
+  1. Lower `Z` to the lowest safe point.
+  2. Zero `Z`.
+  3. Lower `Condenser` to the lowest safe point (ensure no plate collision risk).
+  4. Zero `Condenser`.
+- With both zeroed at the low reference, condenser and focus values can be matched for consistent optical path setup.
+
+### Axis enable behavior
+
+- The `Enable` checkbox at the right of each axis can disable control for that axis.
+- This prevents accidental movement.
+- Important: disabling an axis also affects software/script control, not only manual GUI input.
+
+### Fluorescence selector
+
+- In the `Fluorescence` section, the operational default should be `Position 1`.
+
+## Microscopeone -> Illumination tab (initial observations)
+
+- Multiple LED channels are shown (for example BF 475 nm, BF 528 nm, BF 625 nm, BF 655 nm, FL 385 nm, FL 475 nm, FL 528 nm, FL 625 nm).
+- Each channel has:
+  - intensity slider/value
+  - `Enable` checkbox
+  - status indicator
+- Trigger mode options are visible (`Trigger 0`, `Trigger 1`, `None`).
+- Sequence section includes channel checkboxes per step.
+- Photodiode and recording controls are visible.
+
+## Microscopeone -> Environment tab (initial observations)
+
+- Temperature plot and sensor readbacks (`TC`, `RTD`, `I2C`, enclosure, internal, IO) are shown.
+- Control blocks for peltier/power/enclosure/LED/fan/buzzer are present.
+- Each block appears to include setpoint/value controls and optional enable controls.
+- Recording controls are visible at the bottom.
+
+## Microscopeone -> IO tab
+
+Pending screenshots and commentary.
 
 ## UI screen catalog (build from screenshots)
 
@@ -75,9 +156,9 @@ Add one row per screenshot you share.
 |---|---|---|---|---|
 | `Main_Window.png` | Temika (Main) | Startup control and save naming setup | Menus, Record Camera, Save Settings, basename/append/numbering | Confirm exact behavior of numbering controls |
 | `Main_Window_View_Menu.png` | Temika View Menu | Window visibility toggles for UI modules | Video 0-3, Display Settings, Camera Control, Camera Feedback, Microscopeone, Script | Confirm whether checked state persists across relaunch |
-| `temika-stage-control.png` | Stage Control | Motion and homing controls |  |  |
-| `temika-acquisition.png` | Acquisition | Sequence setup and capture start |  |  |
-| `temika-settings.png` | Settings | Device and profile configuration |  |  |
+| `Microscopeone_Movement.png` | Microscopeone -> Movement | Manual axis motion, reference zeroing, fluorescence position | X/Y/Z/Condenser steppers, speed scales, enable per axis, fluorescence selector, autofocus region | Confirm if speed mapping for values other than 5 is linear |
+| `Microscopeone_Illumination.png` | Microscopeone -> Illumination | LED channel intensity and trigger/sequence setup | Channel sliders, enable toggles, trigger selection, sequence channels, photodiode | Document normal channel presets for common imaging modes |
+| `Microscopeone_Environment.png` | Microscopeone -> Environment | Thermal and power subsystem monitoring/control | Temperature plot, sensor values, peltier/power/enclosure/LED/fan/buzzer controls | Define safe operating ranges and default enabled blocks |
 
 ## Screenshot capture protocol
 
