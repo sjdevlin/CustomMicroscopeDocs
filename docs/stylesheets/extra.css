@@ -57,7 +57,7 @@
 .md-typeset img,
 .md-typeset svg,
 .md-typeset figure img {
-  max-width: 75%;
+  width: 50%;
   height: auto;
 }
 

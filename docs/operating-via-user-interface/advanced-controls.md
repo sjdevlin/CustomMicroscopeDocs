@@ -8,16 +8,9 @@ The `Movement` tab includes an `Afocus` section with:
 
 - autofocus enable
 - autofocus offset
-- live error, velocity, and position status
 - sensor graph
 
-The attached reference XML (`temika.xml`) shows that the autofocus subsystem also supports:
-
-- lock wait: `<wait_lock>value timeout</wait_lock>`
-- sensor period
-- LED drive
-- peak start, stop, threshold, fit points, and setpoint
-- PID tuning values
+![Microscopeone Afocus](../assets/images/temika-manual/microscopeone-afocus.png)
 
 Use autofocus when:
 
@@ -48,27 +41,9 @@ If there is no fluorescent image:
 
 The full filter specifications still need to be added to [Overview](../overview.md).
 
-## Display settings
-
-The manual describes a `Display Settings` window for video display only. These controls affect visualization, not recorded data.
-
-Use it to adjust:
-
-- which video window is being configured
-- which camera stream is shown
-- image scaling
-- interpolation
-- pixel display and colour mapping
-- pixel range mapping, including automatic range and locked range
-
-This is useful when the live image is difficult to inspect because of dynamic range or sensor size.
-
-Screenshot placeholder:
-`TODO: add confirmed Display Settings window screenshot from the Temika manual or a fresh screen capture.`
-
 ## Camera-specific settings
 
-The manual notes that `Camera Control` exposes camera-specific GenICam features defined by the manufacturer. These are the place to set items such as:
+`Camera Control` exposes camera-specific GenICam features defined by the manufacturer. These are the place to set items such as:
 
 - exposure time
 - trigger mode

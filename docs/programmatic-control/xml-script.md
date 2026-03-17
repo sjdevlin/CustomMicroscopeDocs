@@ -11,7 +11,9 @@ The root element is `<temika>`. Inside that, commands are executed in sequence. 
 - `<microscopeone>` for illumination, motion, autofocus, temperature, digital outputs, and recording
 - `<sleep>` and `<timestamp>` for timing control
 
-The attached `temika.xml` reference file shows the supported command vocabulary. A shortened example:
+The full reference file is available here: [temika.xml](../assets/templates/temika.xml)
+
+A shortened example:
 
 ```xml
 <temika>
@@ -39,7 +41,9 @@ The attached `temika.xml` reference file shows the supported command vocabulary.
 
 ## Example: capillary imaging script
 
-The attached `scriptfile.xml` file is a concrete acquisition script for repeated capillary imaging at controlled temperature.
+The full example file is available here: [scriptfile.xml](../assets/templates/scriptfile.xml)
+
+This is a concrete acquisition script for repeated capillary imaging at controlled temperature.
 
 The structure is:
 

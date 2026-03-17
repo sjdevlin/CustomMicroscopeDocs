@@ -2,6 +2,33 @@
 
 Use these as starting points rather than as drop-in production code.
 
+## Full source files
+
+These files are now stored inside the documentation repository so the site can reference real artifacts instead of saying "attached".
+
+### XML files
+
+- [temika.xml](../assets/templates/temika.xml)
+- [scriptfile.xml](../assets/templates/scriptfile.xml)
+
+### Python files
+
+- [temika_jurij.py](../assets/templates/temika_jurij.py)
+- [temika_comms.py](../assets/templates/temika_comms.py)
+- [stage_controller.py](../assets/templates/stage_controller.py)
+- [illumination_controller.py](../assets/templates/illumination_controller.py)
+- [focus_controller.py](../assets/templates/focus_controller.py)
+- [camera_controller.py](../assets/templates/camera_controller.py)
+
+## Why this structure is better
+
+Keeping the full files as downloadable assets is a good idea.
+
+- The documentation pages stay readable.
+- The published site links to real files instead of private local paths.
+- Future revisions can update both the explanation and the underlying file in the same commit.
+- Readers can download and inspect the actual source without copying code blocks out of prose pages.
+
 ## XML template: single-position capture
 
 ```xml

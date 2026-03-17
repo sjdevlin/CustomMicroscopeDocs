@@ -4,7 +4,7 @@ Temika can also be controlled over TCP by sending XML command fragments directly
 
 ## Simple control model
 
-The basic pattern, shown in the attached `temika_jurij.py`, is:
+The basic pattern is shown in the full example file [temika_jurij.py](../assets/templates/temika_jurij.py):
 
 1. Open a TCP socket to `127.0.0.1:60000`.
 2. Send `<temika>` to open a session.
@@ -32,7 +32,7 @@ This works, but it is fragile unless you add timeout handling, reply validation,
 
 ## A more robust pattern
 
-The more advanced code in the attached `temika_comms.py` shows the right concerns:
+The more advanced code in [temika_comms.py](../assets/templates/temika_comms.py) shows the right concerns:
 
 - open the TCP connection once and keep it alive
 - reconnect when the socket becomes invalid
@@ -43,10 +43,10 @@ The more advanced code in the attached `temika_comms.py` shows the right concern
 
 That communication layer is then used by focused wrappers:
 
-- `stage_controller.py`
-- `illumination_controller.py`
-- `focus_controller.py`
-- `camera_controller.py`
+- [stage_controller.py](../assets/templates/stage_controller.py)
+- [illumination_controller.py](../assets/templates/illumination_controller.py)
+- [focus_controller.py](../assets/templates/focus_controller.py)
+- [camera_controller.py](../assets/templates/camera_controller.py)
 
 Ignoring the factory wrappers, the useful pattern is straightforward: each controller builds a small XML fragment for one subsystem and delegates sending and reply handling to a single comms class.
 

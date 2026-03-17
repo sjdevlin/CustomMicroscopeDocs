@@ -70,15 +70,13 @@ Use `Camera control` to:
 
 The exact camera features depend on the camera model and vendor feature set.
 
-### Move the microscope
+### Microscope Window
 
-Open `Microscopeone` and use the `Movement` tab.
+The `Microscopeone` window has four tabs.  You will normally only the first two in basic operations.  
 
 ![Microscopeone movement tab](../assets/images/temika-manual/microscopeone-movement.png)
 
-### Stepper controls
-
-The `Stepper` section contains rows for:
+The `Movement` tab controls all four motorized axes as well as the autofocus function.  The `Stepper` section contains rows for:
 
 - `X` and `Y`: stage motion
 - `Z`: focus
@@ -93,30 +91,11 @@ Each row provides:
 - `Reset` to zero the coordinate
 - `Enable` to allow or block motion
 
-The default speeds depend on the axes.  Be careful when increasing these speeds to the maximum to avoid damage. 
-
-### Start up procedure
-
-Start from a known reference whenever possible.
-
-1. Lower `Z` to the lowest safe position and zero it.
-2. If you want to use absolute XY positioning, for example when imaging a multi-well plate programmatically, then move the XY axes to their minimum values and zero both.
-3. Lower the condenser to the lowest position. **This should be done with no plate or sample holder in the stage, otherwise the condenser will hit it.**
-4. Zero the condenser position.
-
-This routine makes it easier to set condenser and focus to matching values for a repeatable optical path.
-
-### Axis enable
-
-`Enable` disables an axis completely. This prevents accidental motion, but it also affects programmatic control. If an axis refuses to move from software, check whether it has been disabled in the GUI.
-
-## Control illumination
-
-Open `Microscopeone -> Illumination`.
+The default speeds depend on the axes.  Be careful when increasing these speeds to the maximum to avoid damage. `Enable` disables an axis completely. This prevents accidental motion, but it also affects programmatic control. If an axis refuses to move from software, check whether it has been disabled in the GUI.  The `Afocus` section is covered in advanced controls.
 
 ![Microscopeone illumination tab](../assets/images/temika-manual/microscopeone-illumination.png)
 
-Use this tab to:
+The `Illumination` tab allows you to:
 
 - set LED intensity per channel
 - enable or disable each LED channel
@@ -124,17 +103,23 @@ Use this tab to:
 - define multi-step illumination sequences
 - monitor photodiode readouts
 
-For basic operation:
 
-1. Select the required brightfield or epi channel.
-2. Set the intensity.
-3. Enable only the channel you want to use.
-4. Use `Trigger 0` or `Trigger 1` when synchronizing illumination to the camera.
-5. Use `None` only when unsynchronized continuous illumination is intended.
+## 3. Start Imaging
 
-## Take an image
+The basic steps to start imaging are as follows:
 
-For a single interactive acquisition:
+1. Lower `Z` to the lowest safe position and zero it.
+2. If you want to use absolute XY positioning, for example when imaging a multi-well plate programmatically, then move the XY axes to their minimum values and zero both.
+3. Lower the condenser to the lowest position. **This should be done with no plate or sample holder in the stage to avoid collision risk**
+4. Zero the condenser position. This makes it easier to set condenser and focus to matching values for a repeatable optical path.
+5. Select the required brightfield or epi channel.
+6. Set the intensity.
+7. Enable only the channel you want to use.
+8. Use `Trigger 0` or `Trigger 1` when synchronizing illumination to the camera.
+9. Use `None` only when unsynchronized continuous illumination is intended.
+
+
+For a single image:
 
 1. Set the save basename in the main window.
 2. Confirm the required camera is selected in `Camera Control`.
@@ -142,5 +127,6 @@ For a single interactive acquisition:
 4. Move to the desired position in `Microscopeone -> Movement`.
 5. Focus using `Z`, or use autofocus if required.
 6. Use software trigger or record control from `Camera Control`.
+
 
 For streamed recording, the `Record Camera` shortcut on the main window can be used once the save settings are configured.
