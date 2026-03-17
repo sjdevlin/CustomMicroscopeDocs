@@ -2,10 +2,6 @@
 
 Use these as starting points rather than as drop-in production code.
 
-## Full source files
-
-These files are now stored inside the documentation repository so the site can reference real artifacts instead of saying "attached".
-
 ### XML files
 
 - [temika.xml](../assets/templates/temika.xml)
