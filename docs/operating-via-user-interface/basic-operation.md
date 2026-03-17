@@ -1,7 +1,3 @@
-# Basic Operation
-
-This section covers the normal GUI workflow for launching Temika, opening the required windows, moving the microscope, setting illumination, and taking an image.
-
 # Before starting
 
 Always check the position of the lens, condensor and stage before operation to avoid collision damage. The field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.

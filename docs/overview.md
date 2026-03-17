@@ -14,16 +14,16 @@ The Temika microscope is a brightfield and epi-fluorescent microscope designed f
 
 The microscope comes with the following illumination channels:
 
-| Channel | Mode | Nominal LED Wavelength | Notes |
-|---|---|---|---|
-| Ch0 | Brightfield | 475 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch1 | Brightfield | 528 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch2 | Brightfield | 625 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch3 | Brightfield | 655 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch4 | Epi | 385 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch5 | Epi | 475 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch6 | Epi | 528 nm | From GUI screenshot in `temika_manual.odt` |
-| Ch7 | Epi | 625 nm | From GUI screenshot in `temika_manual.odt` |
+| Channel | Mode | Nominal LED Wavelength | 
+|---|---|---|
+| Ch0 | Brightfield | 475 nm | 
+| Ch1 | Brightfield | 528 nm | 
+| Ch2 | Brightfield | 625 nm | 
+| Ch3 | Brightfield | 655 nm | 
+| Ch4 | Epi | 385 nm | 
+| Ch5 | Epi | 475 nm | 
+| Ch6 | Epi | 528 nm | 
+| Ch7 | Epi | 625 nm | 
 
 The integrated chip LEDs can be changed if required. The microscope is shipped with a single filter cube using notch filters in both the excitation and emission paths.
 
@@ -60,10 +60,7 @@ The microscope includes a temperature control module with monitored sensors and 
 Temika provides an optical autofocus subsystem (`afocus`) that behaves like a hardware lock rather than a software image-sharpness search. 
 
 ## Camera
-The microscope comes with a Teledyne monochromatic 7.1 MP camera.  Full specification can be found here:
-https://www.teledynevisionsolutions.com/en-gb/products/blackfly-s-usb3/?model=BFS-U3-70S7M-C&segment=iis&vertical=machine+vision
-
-Other cameras with a C-mount adapter can be fitted to the camera port.
+The microscope comes with a Teledyne monochromatic 7.1 MP camera.  Full specification can be found [on the Teledyne site](https://www.teledynevisionsolutions.com/en-gb/products/blackfly-s-usb3/?model=BFS-U3-70S7M-C&segment=iis&vertical=machine+vision).Other cameras with a C-mount adapter can be fitted to the camera port.
 
 ## Hardware photos
 
