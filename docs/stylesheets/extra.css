@@ -62,7 +62,9 @@
   margin-left: 0.7rem;
 }
 
-.md-sidebar--secondary {
+.md-sidebar--secondary,
+.md-nav--secondary,
+label[for="__toc"] {
   display: none;
 }
 

@@ -19,8 +19,6 @@ theme:
 markdown_extensions:
   - admonition
   - tables
-  - toc:
-      permalink: true
 
 plugins:
   - search
