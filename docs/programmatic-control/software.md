@@ -1,6 +1,6 @@
 # Software
 
-Temika can also be controlled over TCP by sending XML command fragments directly to the local Temika server. This is the better option for plate scanning, long-running experiments, retries, and workflows that need logic based on data or hardware state.
+Temika can also be controlled over TCP by sending XML command fragments directly to the local Temika server. This is the better option for plate scanning, long-running experiments, retries, and workflows that need logic based on data or hardware state.  Any setting or operation available via the GUI can be accessed via an XML command.
 
 ## Simple control model
 

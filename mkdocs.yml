@@ -8,6 +8,7 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: en
+  logo: assets/other/temika_logo.png
   features:
     - navigation.sections
     - navigation.expand
@@ -24,6 +25,9 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md

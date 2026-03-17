@@ -2,6 +2,10 @@
 
 This section covers the normal GUI workflow for launching Temika, opening the required windows, moving the microscope, setting illumination, and taking an image.
 
+# Before starting
+
+Always check the position of the lens, condensor and stage before operation to avoid collision damage. The field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.
+
 ## Start the GUI
 
 1. Open a terminal on the Temika control workstation.
@@ -10,7 +14,9 @@ This section covers the normal GUI workflow for launching Temika, opening the re
 4. Confirm that the `Temika` main window opens.
 5. If a working camera is connected, confirm that a `Temika Video` window opens automatically.
 
-The manuals indicate that `temika` running by itself is enough to expose microscope control to external software and XML scripts. The GUI windows are needed for interactive operation and most settings changes.
+The manuals indicate that `temika` running by itself is enough to expose microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes.  Once the software is running, the 4 motorised axes can all be controlled via the joystick.
+
+TODO: Takea photo of joystcik and explain operaiton.
 
 ## Main window
 
@@ -32,13 +38,13 @@ The main window provides:
 | `Append` | Filename suffix policy | `Nothing`, `Date`, or `Two Numbers` |
 | `First Number` / `Second Number` | Manual numbering fields | Used when `Append = Two Numbers` |
 
-The manual notes that the data partition is RAID0: high performance but not fault-tolerant. Copy data to reliable storage after experiments.
+The data partition is RAID0: which is not fault-tolerant. Always copy your data to reliable storage after experiments.
 
 ## Open the working windows
 
-From `View`, open the windows needed for the current task:
+From the `View` menu, you can open various windows needed for specific settings and tasks:
 
-- `Video 0`
+- `Video (number)`
 - `Display Settings`
 - `Camera Control`
 - `Microscopeone`
@@ -53,20 +59,27 @@ For routine interactive imaging, `Video 0`, `Camera Control`, and `Microscopeone
 The video window displays the live camera stream.
 
 - A purple border at the top and right marks the full camera field of view.
-- Resize the window or change scale to see the full sensor area.
-- Pixel information is shown for the cursor position.
-- Display adjustments are visualization-only and are not recorded into the image data.
+- When you hover over the video window the value of pixel at the cursor poisiton is shown.  This can be a good way to check exposure especially if the display window has set a specific pixel range.
 
-## Camera control
+## Display Settings Window
 
-![Camera control window](../assets/images/temika-manual/camera-control.png)
+![Display settings window](../assets/images/temika-manual/display-settings.png)
 
-Use `Camera Control` to:
+Use `Display setttings` to:
+
+- Resize the window or change scale to see the full sensor area (0.5 is often a good starting point) 
+- Change the pixel range, so that display is clearer - but note that display adjustments are visualization-only and are not recorded into the image data.  
+
+## Camera Control Window
+
+![Camera control window](../assets/images/temika-manual/camera_control.png)
+
+Use `Camera control` to:
 
 - select the active camera
 - rename the displayed camera name if needed
 - enable or disable video transmission
-- access camera-specific GenICam features
+- the "features tree" provides camera-specific GenICam features
 - send a software trigger
 - start recording the camera video stream
 
@@ -95,23 +108,18 @@ Each row provides:
 - `Reset` to zero the coordinate
 - `Enable` to allow or block motion
 
-At slider value `5`, the observed nominal speeds are:
+The default speeds depend on the axes.  Be careful when increasing these speeds to the maximum to avoid damage. 
 
-| Axis | Speed at slider 5 |
-|---|---|
-| X/Y | 100 um/s |
-| Z | 5 um/s |
-| Condenser | 500 um/s |
-
-### Position referencing
+### Start up procedure
 
 Start from a known reference whenever possible.
 
 1. Lower `Z` to the lowest safe position and zero it.
-2. Lower the condenser to the lowest safe position with no plate or sample holder in the way.
+2. If you want to use absolute XY positioning (for example when imaging a multi-well plate programatically) then move the XY to their minimum values and zero both.
+2. Lower the condenser to the lowest position.  **This should be done with no plate or sample holder in the stage otherwise the condensor will hit it**.
 3. Zero the condenser position.
 
-This makes it easier to set condenser and focus to matching values for a repeatable optical path.
+This routine makes it easier to set condenser and focus to matching values for a repeatable optical path.
 
 ### Axis enable
 

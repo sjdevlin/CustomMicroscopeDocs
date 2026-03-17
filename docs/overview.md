@@ -1,6 +1,6 @@
 # Overview
 
-The Temika microscope is a brightfield and epi-fluorescent microscope designed for automated imaging. It combines motorized XY stage motion, motorized focus (`Z`), motorized condenser height, programmable illumination, temperature control, and an optical autofocus system similar in purpose to Nikon PFS.
+The Temika microscope is a brightfield and epi-fluorescent microscope designed for automated imaging. It combines motorized XY stage motion, motorized focus (`Z`), motorized condenser height, programmable illumination, temperature control, and an optical autofocus system similar in operation to the Nikon PFS.
 
 ## Core capabilities
 
@@ -9,13 +9,13 @@ The Temika microscope is a brightfield and epi-fluorescent microscope designed f
 - Motion axes: motorized `X`, `Y`, `Z`, and condenser
 - Stage accessories: interchangeable inserts for cover slides, multiwell plates, and custom sample holders
 - Temperature module: controllable from the GUI or through automation
-- Autofocus: optical level lock with offset and PID-style control parameters
+- Autofocus: optical lever with offset and PID-style control parameters
 
 ## Optical and illumination specification
 
 ### LED channels
 
-The `Microscopeone -> Illumination` tab exposes the following channels:
+The microscope comes with the following illumination channels:
 
 | Channel | Mode | Nominal LED Wavelength | Notes |
 |---|---|---|---|
@@ -28,15 +28,23 @@ The `Microscopeone -> Illumination` tab exposes the following channels:
 | Ch6 | Epi | 528 nm | From GUI screenshot in `temika_manual.odt` |
 | Ch7 | Epi | 625 nm | From GUI screenshot in `temika_manual.odt` |
 
+The integrated chip LEDs can be changed if required.
+
 ### Fluorescence filters
 
-The microscope exposes fluorescence position selection in software, but the attached manuals do not provide the full excitation/dichroic/emission specification. Fill these values once the filter set is confirmed from hardware labels or supplier records.
+The microscope is shipped with a single filter cube using notch filters in both the excitation and emission paths.
+
+`TODO: add link to the supplied notch-filter spectrum file when it is available.`
+
+Because this is a notch-filter-based arrangement, some fluorophores may be visible in two or more channels. Always check fluorophore excitation and emission spectra before planning an experiment or assigning channels.
+
+The filter module on the microscope has three positions so that more specific filter cubes can be added later. Switching between filter positions can be done either from the GUI or through XML commands.
 
 | Position | Intended Use | Excitation Filter | Dichroic | Emission Filter | Notes |
 |---|---|---|---|---|---|
-| 0 | TODO | TODO | TODO | TODO | Placeholder |
-| 1 | Default operating position | TODO | TODO | TODO | Current workflows use this as the standard position |
-| 2 | TODO | TODO | TODO | TODO | Placeholder |
+| 0 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
+| 1 | Default installed notch-filter cube | TODO | TODO | TODO | Current standard operating position |
+| 2 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
 
 ## Motion and sample handling
 
@@ -53,14 +61,13 @@ The microscope includes a temperature control module with monitored sensors and 
 
 ## Autofocus
 
-Temika provides an optical autofocus subsystem (`afocus`) that behaves like a hardware lock rather than a software image-sharpness search. The control layer exposes:
+Temika provides an optical autofocus subsystem (`afocus`) that behaves like a hardware lock rather than a software image-sharpness search. 
 
-- enable/disable
-- offset
-- lock wait
-- peak start/stop/setpoint
-- threshold and fit points
-- PID terms (`kp`, `ti`, `td`)
+## Camera
+The microscope comes with a Teledyne monochromatic 7.1 MP camera.  Full specification can be found here:
+https://www.teledynevisionsolutions.com/en-gb/products/blackfly-s-usb3/?model=BFS-U3-70S7M-C&segment=iis&vertical=machine+vision
+
+Other cameras with a C-mount adapter can be fitted to the camera port.
 
 ## Hardware photos
 
@@ -77,11 +84,3 @@ Temika provides an optical autofocus subsystem (`afocus`) that behaves like a ha
 ![Microscope controller back panel](assets/images/microscope/back-panel.jpg)
 
 ![Microscope controller front panel](assets/images/microscope/front-panel.jpg)
-
-## Important physical features from `microscope.odt`
-
-- Field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.
-- The condenser has centering screws and a locking screw.
-- The phase annulus and Bertrand lens are present for specialized optical modes.
-- The epi-fluorescence block accepts a liquid guide and has a field diaphragm.
-- Camera mounting is via the C-mount camera port.
