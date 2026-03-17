@@ -97,6 +97,6 @@ This approach is intentionally simple, but it is rigid.
 - Logic cannot adapt based on incoming image data or sensor state during the run.
 - Recovery from partial failures is manual.
 - Large scripts become repetitive and hard to validate.
-- State is implicit: if a previous command fails or is skipped, later commands may still run.
+- If a previous command fails or is skipped, later commands may still run.
 
-Use XML when the sequence is fixed. Move to TCP software control when the run needs state tracking, retries, validation, or data-dependent decisions.
+Use XML when the sequence is fixed. Move to software control when the run needs state tracking, retries, validation, or data-dependent decisions.
