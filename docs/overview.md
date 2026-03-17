@@ -4,16 +4,13 @@ The Temika microscope is a brightfield and epi-fluorescent microscope designed f
 
 ## Core capabilities
 
-- Imaging modes: brightfield and epi-fluorescence
-- Illumination channels: 8 total
+- Imaging modes: brightfield and epi-fluorescence (each with 4 illumination channels)
 - Motion axes: motorized `X`, `Y`, `Z`, and condenser
 - Stage accessories: interchangeable inserts for cover slides, multiwell plates, and custom sample holders
 - Temperature module: controllable from the GUI or through automation
 - Autofocus: optical lever with offset and PID-style control parameters
 
 ## Optical and illumination specification
-
-### LED channels
 
 The microscope comes with the following illumination channels:
 
@@ -28,17 +25,16 @@ The microscope comes with the following illumination channels:
 | Ch6 | Epi | 528 nm | From GUI screenshot in `temika_manual.odt` |
 | Ch7 | Epi | 625 nm | From GUI screenshot in `temika_manual.odt` |
 
-The integrated chip LEDs can be changed if required.
-
-### Fluorescence filters
-
-The microscope is shipped with a single filter cube using notch filters in both the excitation and emission paths.
+The integrated chip LEDs can be changed if required. The microscope is shipped with a single filter cube using notch filters in both the excitation and emission paths.
 
 `TODO: add link to the supplied notch-filter spectrum file when it is available.`
 
 Because this is a notch-filter-based arrangement, some fluorophores may be visible in two or more channels. Always check fluorophore excitation and emission spectra before planning an experiment or assigning channels.
 
 The filter module on the microscope has three positions so that more specific filter cubes can be added later. Switching between filter positions can be done either from the GUI or through XML commands.
+
+Useful reference for checking excitation and emission overlap:
+[Thermo Fisher Fluorescence SpectraViewer](https://www.thermofisher.com/order/fluorescence-spectraviewer/#!/)
 
 | Position | Intended Use | Excitation Filter | Dichroic | Emission Filter | Notes |
 |---|---|---|---|---|---|

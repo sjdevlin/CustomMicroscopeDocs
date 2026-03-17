@@ -5,22 +5,22 @@
 }
 
 .md-typeset {
-  font-size: 0.8rem;
-  line-height: 1.45;
+  font-size: 0.75rem;
+  line-height: 1.0rem;
 }
 
 .md-typeset h1 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   margin: 0 0 0.5rem;
 }
 
 .md-typeset h2 {
-  font-size: 1.25rem;
+  font-size: 1.0rem;
   margin: 1rem 0 0.4rem;
 }
 
 .md-typeset h3 {
-  font-size: 1.05rem;
+  font-size: 1.0rem;
   margin: 0.85rem 0 0.35rem;
 }
 
@@ -37,9 +37,15 @@
 .md-typeset table,
 .md-typeset .admonition,
 .md-typeset details {
-  margin: 0 0 0.7em;
+  margin: 0 0 0.35em;
 }
 
 .md-typeset hr {
   margin: 0.8rem 0;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding-top: 0.48em;
+  padding-bottom: 0.48em;
 }
