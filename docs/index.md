@@ -1,24 +1,28 @@
 # Temika Microscope Documentation
 
-This site is the working source of truth for design, operation, and maintenance of the Temika microscope.
+This site documents the Temika microscope as an instrument and as a control platform.
 
-## Start here (first hour)
+## Start here
 
-1. Complete [Data Capture Pack](data-capture-pack.md).
-2. Fill [Overview](overview.md) with measured capabilities and system boundaries.
-3. Populate [Bill of Materials](bom.md) with real part numbers and suppliers.
-4. Validate a full run using [Operating Procedures](operation-sops.md).
-5. Log findings in [Maintenance & Change Log](maintenance-change-log.md).
+1. Read [Overview](overview.md) for microscope capabilities, channel layout, inserts, autofocus, and hardware photos.
+2. Use [Basic Operation](operating-via-user-interface/basic-operation.md) to launch `temika`, move the microscope, control illumination, and acquire images.
+3. Use [Advanced Controls](operating-via-user-interface/advanced-controls.md) for autofocus, temperature control, filter position, and deeper GUI features.
+4. Use [Programmatic Control](programmatic-control/xml-script.md) when building scripted runs or long unattended acquisitions.
+5. Check [Troubleshooting](troubleshooting.md) before modifying hardware or scripts.
 
-## Working rules
+## Source material used for this version
 
-- Keep procedures reproducible with objective pass/fail checks.
-- Prefer measured values, photos, and datasets over narrative text.
-- Record assumptions and limitations explicitly.
-- Update documentation in the same change as hardware or software updates.
+- `microscope.odt`
+- `temika_manual.odt`
+- `temika.xml`
+- `scriptfile.xml`
+- `temika_jurij.py`
+- `temika_comms.py`
+- `stage_controller.py`
+- `illumination_controller.py`
+- `focus_controller.py`
+- `camera_controller.py`
 
-## Current status
+## Code-as-docs principle
 
-- Site structure: complete
-- Operational content: in progress
-- Calibration and validation records: pending first capture session
+The documentation lives in Git alongside example XML scripts, Python control code, and extracted screenshots. Changes to operation or automation should be documented in the same revision that changes the underlying files.

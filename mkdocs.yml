@@ -28,16 +28,13 @@ plugins:
 nav:
   - Home: index.md
   - Overview: overview.md
-  - Data Capture Pack: data-capture-pack.md
-  - Bill of Materials: bom.md
-  - Mechanical Assembly: mechanical-assembly.md
-  - Optics Path: optics-path.md
-  - Electronics & Wiring: electronics-wiring.md
-  - User Interface: user-interface.md
-  - Software Control: software-control.md
-  - Calibration & Validation: calibration-validation.md
-  - Operating Procedures: operation-sops.md
+  - Operating Via The User Interface:
+      - Basic Operation: operating-via-user-interface/basic-operation.md
+      - Advanced Controls: operating-via-user-interface/advanced-controls.md
+  - Programmatic Control:
+      - XML Script: programmatic-control/xml-script.md
+      - Software: programmatic-control/software.md
+      - Templates: programmatic-control/templates.md
   - Troubleshooting: troubleshooting.md
-  - Maintenance & Change Log: maintenance-change-log.md
-  - Safety: safety.md
-  - Contributing: contributing.md
+  - Maintenance: maintenance.md
+  - Documentation Maintenance: documentation-maintenance.md

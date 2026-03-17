@@ -4,14 +4,19 @@ Documentation site for the Temika microscope using MkDocs + Material.
 
 ## What this repo is for
 
-This repository is a code-as-docs system for microscope build records, operating SOPs, calibration protocols, and maintenance history.
+This repository is a code-as-docs system for the Temika microscope user guide, control reference, automation examples, troubleshooting notes, and maintenance documentation.
 
-## Suggested first workflow
+## Site structure
 
-1. Complete `docs/data-capture-pack.md` during a focused lab session.
-2. Fill `docs/overview.md` and `docs/bom.md` with measured values and real part numbers.
-3. Validate one end-to-end run using `docs/operation-sops.md`.
-4. Record outcomes in `docs/maintenance-change-log.md`.
+- `docs/overview.md`
+- `docs/operating-via-user-interface/basic-operation.md`
+- `docs/operating-via-user-interface/advanced-controls.md`
+- `docs/programmatic-control/xml-script.md`
+- `docs/programmatic-control/software.md`
+- `docs/programmatic-control/templates.md`
+- `docs/troubleshooting.md`
+- `docs/maintenance.md`
+- `docs/documentation-maintenance.md`
 
 ## Local preview
 

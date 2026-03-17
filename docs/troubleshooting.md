@@ -1,38 +1,27 @@
 # Troubleshooting
 
-## Stop conditions
+Use this page as the first pass before changing hardware settings or editing scripts.
 
-Stop operation immediately if any of the following occurs:
+## Common problems
 
-- Burning smell, smoke, unusual heat, or exposed conductors
-- Safety interlock failure or emergency stop malfunction
-- Unexpected stage motion or collision risk
-
-## Quick triage matrix
-
-| Symptom | Likely cause | First checks | Corrective action |
+| Symptom | Likely cause | Checks | Action |
 |---|---|---|---|
-| No image | Illumination off, camera disconnected, wrong profile | Verify source on, camera link, exposure settings | Restore connection, load known-good profile |
-| Blurry image | Defocus, sample tilt, vibration | Refocus, inspect mounting, check stage stability | Re-level sample, reduce vibration, rerun focus routine |
-| Stage drift | Thermal drift, backlash, controller tuning | Run repeatability check, inspect backlash and temperature | Warm-up period, retune, service mechanics |
-| Software disconnect | USB/network instability, driver crash | Check logs and cable integrity, restart device service | Reconnect with clean startup, replace cable if recurring |
+| No image in fluorescent mode | Wrong fluorescence position or filter path | Check fluorescence position and active LED channel | Set the validated filter position and correct epi channel |
+| No live video window on startup | Camera not connected or transmission disabled | Confirm camera connection and open `Camera Control` | Reconnect camera, enable transmission, restart `temika` if needed |
+| Stage or focus will not move | Axis disabled in `Movement` tab | Check `Enable` checkbox for the axis | Re-enable axis, then retry GUI or software control |
+| Condenser hits sample holder path | Condenser zeroed with plate in place or moved unsafely | Inspect physical clearance before motion | Remove obstruction, re-home carefully, reset zero if needed |
+| Autofocus fails to lock | Optical path mismatch, bad sample interface, or autofocus left disabled | Check autofocus enable, offset, and signal graph | Disable autofocus, refocus manually, restore optical path, then retry lock |
+| Image too dark | LED channel disabled, low intensity, or short exposure | Check illumination enable, intensity, and camera exposure | Enable correct LED, increase intensity or exposure |
+| Script runs but images are missing | Save basename incorrect, recording off, or trigger misconfigured | Check main window save settings, `<record>`, and trigger mode | Fix output path and camera trigger configuration |
+| Long run completed but data is gone | Data left on RAID0 workspace only | Check whether data was copied after acquisition | Copy datasets to reliable storage immediately after runs |
+| Temperature does not stabilize | Wrong sensor or feedback channel, feedback not enabled | Check `Environment` tab channel mapping and setpoint path | Validate wiring and feedback target before retrying |
+| Software control receives no useful reply | Socket dropped, stale buffer, or timeout | Inspect logs from the TCP client | Reconnect, clear stale data, and wait for explicit reply tokens |
 
-## Diagnostic data to collect
+## What to capture when reporting a problem
 
-- Timestamp and operator
-- Active hardware/software revision
-- Last known good run
-- Relevant logs and screenshots
-- Any recent hardware/software changes
-
-## Incident report template
-
-- Date/time:
-- Operator:
-- Symptom:
-- Reproduction steps:
-- What changed recently:
-- Logs/screenshots:
-- Root cause (if known):
-- Resolution:
-- Follow-up actions:
+- Screenshot of the relevant Temika window
+- Terminal output from the `temika` launch session
+- Current save basename and output directory
+- Camera name and trigger mode
+- Active illumination channel and fluorescence position
+- XML or Python command fragment if the run was automated
