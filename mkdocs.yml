@@ -10,7 +10,6 @@ theme:
   language: en
   logo: assets/other/temika_logo.png
   features:
-    - navigation.sections
     - navigation.expand
     - navigation.top
     - content.code.copy

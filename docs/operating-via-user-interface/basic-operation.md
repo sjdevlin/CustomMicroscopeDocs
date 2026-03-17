@@ -1,6 +1,6 @@
 # Before starting
 
-Always check the position of the lens, condensor and stage before operation to avoid collision damage. The field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.
+Always check the position of the lens, condenser, and stage before operation to avoid collision damage. The field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.
 
 ## Start the GUI
 
@@ -10,9 +10,9 @@ Always check the position of the lens, condensor and stage before operation to a
 4. Confirm that the `Temika` main window opens.
 5. If a working camera is connected, confirm that a `Temika Video` window opens automatically.
 
-The manuals indicate that `temika` running by itself is enough to expose microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes.  Once the software is running, the 4 motorised axes can all be controlled via the joystick.
+The manuals indicate that `temika` running by itself is enough to expose microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes. Once the software is running, the four motorised axes can all be controlled via the joystick.
 
-TODO: Takea photo of joystcik and explain operaiton.
+TODO: Take a photo of the joystick and explain operation.
 
 ## Main window
 
@@ -55,13 +55,13 @@ For routine interactive imaging, `Video 0`, `Camera Control`, and `Microscopeone
 The video window displays the live camera stream.
 
 - A purple border at the top and right marks the full camera field of view.
-- When you hover over the video window the value of pixel at the cursor poisiton is shown.  This can be a good way to check exposure especially if the display window has set a specific pixel range.
+- When you hover over the video window, the value of the pixel at the cursor position is shown. This can be a good way to check exposure, especially if the display window has set a specific pixel range.
 
 ## Display Settings Window
 
 ![Display settings window](../assets/images/temika-manual/display-settings.png)
 
-Use `Display setttings` to:
+Use `Display Settings` to:
 
 - Resize the window or change scale to see the full sensor area (0.5 is often a good starting point) 
 - Change the pixel range, so that display is clearer - but note that display adjustments are visualization-only and are not recorded into the image data.  
@@ -111,9 +111,9 @@ The default speeds depend on the axes.  Be careful when increasing these speeds 
 Start from a known reference whenever possible.
 
 1. Lower `Z` to the lowest safe position and zero it.
-2. If you want to use absolute XY positioning (for example when imaging a multi-well plate programatically) then move the XY to their minimum values and zero both.
-2. Lower the condenser to the lowest position.  **This should be done with no plate or sample holder in the stage otherwise the condensor will hit it**.
-3. Zero the condenser position.
+2. If you want to use absolute XY positioning, for example when imaging a multi-well plate programmatically, then move the XY axes to their minimum values and zero both.
+3. Lower the condenser to the lowest position. **This should be done with no plate or sample holder in the stage, otherwise the condenser will hit it.**
+4. Zero the condenser position.
 
 This routine makes it easier to set condenser and focus to matching values for a repeatable optical path.
 
