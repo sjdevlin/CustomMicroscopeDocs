@@ -81,6 +81,10 @@ label[for="__toc"] {
   font-weight: 700;
 }
 
+.md-header__topic:first-child {
+  display: none;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-grid {
     max-width: none;
