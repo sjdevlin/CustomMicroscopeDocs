@@ -72,7 +72,7 @@ Use `Display setttings` to:
 
 ## Camera Control Window
 
-![Camera control window](../assets/images/temika-manual/camera_control.png)
+![Camera control window](../assets/images/temika-manual/camera-control.png)
 
 Use `Camera control` to:
 

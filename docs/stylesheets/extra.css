@@ -3,3 +3,43 @@
   width: 64px;
   height: auto;
 }
+
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.md-typeset h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.05rem;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-size: 0.95rem;
+  margin: 0.75rem 0 0.3rem;
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol,
+.md-typeset table,
+.md-typeset .admonition,
+.md-typeset details {
+  margin: 0 0 0.7em;
+}
+
+.md-typeset hr {
+  margin: 0.8rem 0;
+}
