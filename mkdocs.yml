@@ -1,4 +1,4 @@
-site_name: Temika Microscope Documentation
+site_name: TEMIKA MICROSCOPE 1
 site_description: Living technical documentation for the Temika microscope.
 site_url: https://sjdevlin.github.io/CustomMicroscopeDocs/
 repo_url: https://github.com/sjdevlin/CustomMicroscopeDocs
@@ -19,6 +19,8 @@ theme:
 markdown_extensions:
   - admonition
   - tables
+  - toc:
+      permalink: true
 
 plugins:
   - search

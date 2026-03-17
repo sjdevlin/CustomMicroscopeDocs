@@ -2,7 +2,7 @@
 
 Always check the position of the lens, condenser, and stage before operation to avoid collision damage. The field diaphragm and aperture diaphragm should normally be opened fully for standard setup unless a specific imaging mode requires adjustment.
 
-## Start the GUI
+## 1. Start the GUI
 
 1. Open a terminal on the Temika control workstation.
 2. Run `temika`.
@@ -10,22 +10,16 @@ Always check the position of the lens, condenser, and stage before operation to 
 4. Confirm that the `Temika` main window opens.
 5. If a working camera is connected, confirm that a `Temika Video` window opens automatically.
 
-The manuals indicate that `temika` running by itself is enough to expose microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes. Once the software is running, the four motorised axes can all be controlled via the joystick.
+If the `temika` software is running, this is sufficient to provide microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes. Once the software is running, the four motorised axes can all be controlled via the joystick.
 
 TODO: Take a photo of the joystick and explain operation.
 
-## Main window
+
+### Main window
 
 ![Temika main window](../assets/images/temika-manual/main-window.png)
 
-The main window provides:
-
-- `File`, `View`, and `Help` menus
-- `Record Camera` shortcut
-- `Advanced` shortcut
-- save settings for output naming and annotation
-
-### Save settings
+The `Record Camera` button will begin continuous image capture, don't press this until you have made all the setting adjustments you require.  The `Advanced` button provides GUI access to detailed sensor data and settings.  This is not required during normal operation, but can be useful during troubleshooting. The `Save Settings` fields can be used to customise your image file names:
 
 | Control | Purpose | Notes |
 |---|---|---|
@@ -34,39 +28,34 @@ The main window provides:
 | `Append` | Filename suffix policy | `Nothing`, `Date`, or `Two Numbers` |
 | `First Number` / `Second Number` | Manual numbering fields | Used when `Append = Two Numbers` |
 
-The data partition is RAID0: which is not fault-tolerant. Always copy your data to reliable storage after experiments.
+**Note:** The data partition is RAID0: which is not fault-tolerant. Always copy your data to reliable storage after experiments.
 
-## Open the working windows
+### Video window
 
-From the `View` menu, you can open various windows needed for specific settings and tasks:
+<img src="../assets/images/temika-manual/video-window.png" alt="Temika Video window" width="400">
 
-- `Video (number)`
-- `Display Settings`
-- `Camera Control`
-- `Microscopeone`
-- `Script` when running XML scripts
-
-For routine interactive imaging, `Video 0`, `Camera Control`, and `Microscopeone` are the usual minimum set.
-
-## Video window
-
-![Temika video window](../assets/images/temika-manual/video-window.png)
-
-The video window displays the live camera stream.
+The video 0 window also opens automatically when the software is launched.  This displays the live camera stream.
 
 - A purple border at the top and right marks the full camera field of view.
 - When you hover over the video window, the value of the pixel at the cursor position is shown. This can be a good way to check exposure, especially if the display window has set a specific pixel range.
 
-## Display Settings Window
+
+## 2. Open the other main windows
+
+From the `View` menu, you can open various windows needed for specific settings and tasks. For routine interactive imaging, `Display Settings`, `Camera Control`, and `Microscopeone` are the usual minimum set.
+
+### Display Settings Window
 
 ![Display settings window](../assets/images/temika-manual/display-settings.png)
 
 Use `Display Settings` to:
 
-- Resize the window or change scale to see the full sensor area (0.5 is often a good starting point) 
-- Change the pixel range, so that display is clearer - but note that display adjustments are visualization-only and are not recorded into the image data.  
+- Resize the window or change scale to see the full sensor area.  Downscaling is recommended for larger camera sensors.  0.5 is often a good starting point with a 7M pixel camera. 
+- The 'pixel range' frame allows you to control how actual pixel values are mapped to 256 grey levels for display. Checking 'Automatic' rescales based on current min/max values across the sensor.  'Lock' copies the current automatic range to fixed Low/High values.
 
-## Camera Control Window
+**Note:** These display adjustments are visualization-only and are not recorded into the image data.  
+
+### Camera Control Window
 
 ![Camera control window](../assets/images/temika-manual/camera-control.png)
 
@@ -81,7 +70,7 @@ Use `Camera control` to:
 
 The exact camera features depend on the camera model and vendor feature set.
 
-## Move the microscope
+### Move the microscope
 
 Open `Microscopeone` and use the `Movement` tab.
 

@@ -29,7 +29,16 @@ Disable autofocus before large manual `Z` moves or scripted repositioning, then 
 
 ## Fluorescence position
 
-The `Movement` tab includes fluorescence position selection. Existing operating practice is to keep the microscope in `Position 1` unless a specific validated workflow requires a different setting.
+The `Movement` tab includes fluorescence position selection. The filter module on the microscope has three positions so that more specific filter cubes can be added later. Switching between filter positions can be done either from the GUI or through XML commands. The default operating practice is to keep the microscope in `Position 1` unless a specific validated workflow requires a different setting. The default filter is a notch-filter-based arrangement and so some fluorophores may be visible in two or more channels. Always check fluorophore excitation and emission spectra before planning an experiment or assigning channels.
+
+Useful reference for checking excitation and emission overlap:
+[Thermo Fisher Fluorescence SpectraViewer](https://www.thermofisher.com/order/fluorescence-spectraviewer/#!/)
+
+| Position | Intended Use | Excitation Filter | Dichroic | Emission Filter | Notes |
+|---|---|---|---|---|---|
+| 0 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
+| 1 | Default installed notch-filter cube | TODO | TODO | TODO | Current standard operating position |
+| 2 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
 
 If there is no fluorescent image:
 

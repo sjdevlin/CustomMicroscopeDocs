@@ -1,5 +1,3 @@
-# Overview
-
 The Temika microscope is a brightfield and epi-fluorescent microscope designed for automated imaging. It combines motorized XY stage motion, motorized focus (`Z`), motorized condenser height, programmable illumination, temperature control, and an optical autofocus system similar in operation to the Nikon PFS.
 
 ## Core capabilities
@@ -27,21 +25,6 @@ The microscope comes with the following illumination channels:
 
 The integrated chip LEDs can be changed if required. The microscope is shipped with a single filter cube using notch filters in both the excitation and emission paths.
 
-`TODO: add link to the supplied notch-filter spectrum file when it is available.`
-
-Because this is a notch-filter-based arrangement, some fluorophores may be visible in two or more channels. Always check fluorophore excitation and emission spectra before planning an experiment or assigning channels.
-
-The filter module on the microscope has three positions so that more specific filter cubes can be added later. Switching between filter positions can be done either from the GUI or through XML commands.
-
-Useful reference for checking excitation and emission overlap:
-[Thermo Fisher Fluorescence SpectraViewer](https://www.thermofisher.com/order/fluorescence-spectraviewer/#!/)
-
-| Position | Intended Use | Excitation Filter | Dichroic | Emission Filter | Notes |
-|---|---|---|---|---|---|
-| 0 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
-| 1 | Default installed notch-filter cube | TODO | TODO | TODO | Current standard operating position |
-| 2 | Optional cube slot | TODO | TODO | TODO | Available for a more specific cube |
-
 ## Motion and sample handling
 
 | Subsystem | Description | Notes |
@@ -53,22 +36,22 @@ Useful reference for checking excitation and emission overlap:
 
 ## Temperature control
 
-The microscope includes a temperature control module with monitored sensors and controllable power channels. The GUI exposes temperature plots, readback values, and feedback enable controls. Programmatic control is also available through `microscopeone` XML commands such as `<pwr number="0"><feedback>...</feedback></pwr>`.
+The microscope includes a temperature control module with monitored sensors and controllable power channels. The GUI exposes temperature plots, readback values, and feedback enable controls. Programmatic control is also available through XML commands.
 
 ## Autofocus
 
-Temika provides an optical autofocus subsystem (`afocus`) that behaves like a hardware lock rather than a software image-sharpness search. 
+Temika provides an optical autofocus subsystem that behaves like a hardware lock rather than a software image-sharpness search. 
 
 ## Camera
-The microscope comes with a Teledyne monochromatic 7.1 MP camera.  Full specification can be found [on the Teledyne site](https://www.teledynevisionsolutions.com/en-gb/products/blackfly-s-usb3/?model=BFS-U3-70S7M-C&segment=iis&vertical=machine+vision).Other cameras with a C-mount adapter can be fitted to the camera port.
+The microscope comes with a Teledyne monochromatic 7.1 MP camera.  Full specification can be found [on the Teledyne site](https://www.teledynevisionsolutions.com/en-gb/products/blackfly-s-usb3/?model=BFS-U3-70S7M-C&segment=iis&vertical=machine+vision). Other cameras with a C-mount adapter can be fitted to the camera port.
 
-## Hardware photos
+## Hardware overview
+The system comprises three separate interconnected parts.  A dedicated unix computer provides a user interface and programatic control of the microscope.  The computer is connected via USB cable to a controller unit that provides power to, and feedabck and data back from, the microscope.
 
-### Front view
-
+### Microscope front view
 ![Front view of the Temika microscope](assets/images/microscope/front-view.jpg)
 
-### Rear view
+### Microscope rear view
 
 ![Rear view of the Temika microscope](assets/images/microscope/rear-view.jpg)
 

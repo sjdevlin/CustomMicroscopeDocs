@@ -5,7 +5,7 @@
 }
 
 .md-typeset {
-  font-size: 0.75rem;
+  font-size: 0.70rem;
   line-height: 1.0rem;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .md-typeset h3 {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   margin: 0.85rem 0 0.35rem;
 }
@@ -66,6 +66,12 @@
 .md-nav--secondary,
 label[for="__toc"] {
   display: none;
+}
+
+.md-header__title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 76.25em) {
