@@ -32,7 +32,7 @@ This works, but it is fragile unless you add timeout handling, reply validation,
 
 ## A more robust pattern
 
-The more advanced code in [temika_comms.py](../assets/templates/temika_comms.py) shows the right concerns:
+The more advanced code in [temika_comms.py](../assets/templates/temika_comms.py) is more robust:
 
 - open the TCP connection once and keep it alive
 - reconnect when the socket becomes invalid
@@ -41,14 +41,14 @@ The more advanced code in [temika_comms.py](../assets/templates/temika_comms.py)
 - abort on timeout
 - treat `ERROR` in the reply as a failed command
 
-That communication layer is then used by focused wrappers:
+This communication code can then be re-used by function specific wrappers:
 
 - [stage_controller.py](../assets/templates/stage_controller.py)
 - [illumination_controller.py](../assets/templates/illumination_controller.py)
 - [focus_controller.py](../assets/templates/focus_controller.py)
 - [camera_controller.py](../assets/templates/camera_controller.py)
 
-Ignoring the factory wrappers, the useful pattern is straightforward: each controller builds a small XML fragment for one subsystem and delegates sending and reply handling to a single comms class.
+Each controller builds a small XML fragment for one subsystem and delegates sending and reply handling to a single comms class.
 
 ## Example command patterns
 
@@ -116,11 +116,7 @@ When you switch illumination, filter position, autofocus state, or recording sta
 
 ### Keep a single source of connection handling
 
-`temika_comms.py` centralizes retries, timeout handling, and stale-buffer clearing. That is the right design pressure even if the implementation is later simplified.
-
-### Validate coordinates before sending them
-
-Several of the controller wrappers apply scaling and offsets. Validate coordinate transforms in your application layer before issuing motion commands, especially for `Y` inversion and origin offsets.
+`temika_comms.py` centralizes retries, timeout handling, and stale-buffer clearing. This is good practice, even if the implementation is later simplified.
 
 ## Common software-side failure modes
 
