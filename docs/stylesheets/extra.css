@@ -54,6 +54,13 @@
   padding-bottom: 0.48em;
 }
 
+.md-typeset img,
+.md-typeset svg,
+.md-typeset figure img {
+  max-width: 75%;
+  height: auto;
+}
+
 .md-nav--primary .md-nav__item--section > .md-nav__link {
   font-weight: 400;
 }

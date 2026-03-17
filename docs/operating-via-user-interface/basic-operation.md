@@ -32,7 +32,7 @@ The `Record Camera` button will begin continuous image capture, don't press this
 
 ### Video window
 
-<img src="../assets/images/temika-manual/video-window.png" alt="Temika Video window" width="400">
+![Temika video window](../assets/images/temika-manual/video-window.png)
 
 The video 0 window also opens automatically when the software is launched.  This displays the live camera stream.
 
@@ -51,7 +51,7 @@ From the `View` menu, you can open various windows needed for specific settings 
 Use `Display Settings` to:
 
 - Resize the window or change scale to see the full sensor area.  Downscaling is recommended for larger camera sensors.  0.5 is often a good starting point with a 7M pixel camera. 
-- The 'pixel range' frame allows you to control how actual pixel values are mapped to 256 grey levels for display. Checking 'Automatic' rescales based on current min/max values across the sensor.  'Lock' copies the current automatic range to fixed Low/High values.
+- The `pixel range` frame allows you to control how actual pixel values are mapped to 256 grey levels for display. Checking `Automatic` rescales based on current min/max values across the sensor.  `Lock` copies the current automatic range to fixed Low/High values.
 
 **Note:** These display adjustments are visualization-only and are not recorded into the image data.  
 
