@@ -12,7 +12,8 @@ Always check the position of the lens, condenser, and stage before operation to 
 
 If the `temika` software is running, this is sufficient to provide microscope control to external software and XML scripts. The GUI windows can be used for interactive operation and settings changes. Once the software is running, the four motorised axes can all be controlled via the joystick.
 
-TODO: Take a photo of the joystick and explain operation.
+
+![Space Mouse](../assets/images/temika-manual/space-mouse.png)
 
 
 ### Main window
